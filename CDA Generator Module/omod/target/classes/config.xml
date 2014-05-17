@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+
+	<!-- Module Properties -->
+	<id>CDAGeneratorModule</id>
+	<name>CDA Generator Module Module</name>
+	<version>1.0-SNAPSHOT</version>
+	<package>org.openmrs.module.CDAGeneratorModule</package>
+	<author>Vaibhav Agarwal</author>
+	<description>
+		This module aims to generate cda documents based on user request
+	</description>
+	<updateURL>https://modules.openmrs.org/modules/download/CDAGeneratorModule/update.rdf</updateURL>
+	<require_version>1.9.0</require_version>
+	<!-- / Module Properties -->
+
+	
+	<!-- Module Activator -->
+	<activator>org.openmrs.module.CDAGeneratorModule.CDAGeneratorModuleActivator</activator>
+	
+	
+	<!-- Adds link to admin page -->
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>org.openmrs.module.CDAGeneratorModule.extension.html.AdminList</class>
+	</extension>
+	
+	<!-- Maps hibernate file's, if present -->
+	<mappingFiles>
+				
+		y.hbm.xml
+				
+	</mappingFiles>
+
+	<!-- Internationalization -->
+	<!-- All message codes should start with CDAGeneratorModule. -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+
+</module>
+
